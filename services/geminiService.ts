@@ -1,9 +1,10 @@
 import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
+import { MessageRole } from "../types";
 import { TRIP_DATA } from "../constants";
 
 // Initialize the Gemini Client
-// The API key must be obtained exclusively from the environment variable process.env.API_KEY.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// IMPORTANT: process.env.API_KEY must be set in the environment
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
 
 // Prepare system context based on the trip data
 const systemContext = `
