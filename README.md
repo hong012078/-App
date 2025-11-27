@@ -1,20 +1,60 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🇻🇳 Da Nang & Hoi An Trip Planner (PWA)
 
-# Run and deploy your AI Studio app
+這是一個專為峴港與會安 6 日遊設計的互動式旅遊 Web App。結合了詳細的行程時間軸與 Google Gemini AI 旅遊助理，並支援 PWA 技術，可直接安裝於手機主畫面，提供如同原生 App 的體驗。
 
-This contains everything you need to run your app locally.
+![Tech Stack](https://img.shields.io/badge/Tech-React_19-blue)
+![Tech Stack](https://img.shields.io/badge/Style-Tailwind_CSS-38bdf8)
+![Tech Stack](https://img.shields.io/badge/AI-Google_Gemini-8e75b2)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1poQlgHeP8nqYYQxgMWnsZFvO4I-id8PK
+## ✨ 特色功能
 
-## Run Locally
+*   **📱 行動優先設計 (Mobile-First)**：專為手機瀏覽優化，支援 PWA 安裝。
+*   **🤖 AI 旅遊助理**：內建 Google Gemini 對話視窗，可隨時詢問行程細節、當地天氣或旅遊建議。
+*   **📅 互動式時間軸**：清晰的每日行程卡片，包含景點、餐飲與住宿資訊。
+*   **🎫 票券與詳情**：點擊行程可查看詳細資訊（如航班號、飯店訂房代碼、門票 QR Code 模擬）。
+*   **🗺️ 地圖導航**：整合 Google Maps 連結，一鍵導航至景點或推薦餐廳。
 
-**Prerequisites:**  Node.js
+## 🚀 如何部署 (免費獲得 HTTPS 網址)
 
+為了在手機上使用 PWA 安裝功能，你需要將此專案部署到支援 HTTPS 的平台。推薦使用 **Vercel**。
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 使用 Vercel 部署 (推薦)
+
+1.  註冊/登入 [Vercel](https://vercel.com/)。
+2.  點擊 **"Add New..."** -> **"Project"**。
+3.  選擇你剛上傳的 GitHub Repository 並點擊 **"Import"**。
+4.  **重要：設定環境變數**
+    *   在 "Environment Variables" 區域：
+    *   Key: `API_KEY` (或是你的建置工具要求的變數名稱，如 Vite 需用 `VITE_API_KEY`)
+    *   Value: 貼上你的 Google Gemini API Key。
+5.  點擊 **"Deploy"**。
+6.  部署完成後，Vercel 會給你一個網址 (例如 `https://project-name.vercel.app`)。
+
+## 📲 如何在手機上安裝
+
+取得上述的網址後，在手機瀏覽器開啟：
+
+*   **iOS (Safari)**: 點擊底部「分享」按鈕 (Share) -> 選擇「加入主畫面」(Add to Home Screen)。
+*   **Android (Chrome)**: 點擊右上角選單 -> 選擇「安裝應用程式」或「加到主畫面」。
+
+## 🛠️ 本地開發
+
+如果你想在電腦上執行：
+
+1.  Clone 專案：
+    ```bash
+    git clone https://github.com/your-username/your-repo.git
+    ```
+2.  安裝依賴：
+    ```bash
+    npm install
+    ```
+3.  建立 `.env` 檔案並填入 API Key。
+4.  啟動開發伺服器：
+    ```bash
+    npm run dev
+    ```
+
+## 📄 License
+
+MIT
